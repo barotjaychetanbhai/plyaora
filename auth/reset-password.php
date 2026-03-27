@@ -1,6 +1,5 @@
 <?php
-require_once '../includes/db.php';
-require_once '../includes/functions.php';
+require_once '../player/includes/db.php';
 
 $token = $_GET['token'] ?? '';
 $type = $_GET['type'] ?? ''; // 'user' or 'owner'
@@ -71,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $validToken) {
             <div class="bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 p-4 rounded-xl mb-6 text-sm flex items-center gap-3">
                 <i data-lucide="check-circle" class="w-4 h-4 shrink-0"></i> <?php echo htmlspecialchars($success); ?>
             </div>
-            <a href="<?php echo ($type === 'user') ? 'login.php' : 'login.php?role=owner'; ?>" class="w-full block bg-emerald-500 text-black text-center font-bold py-3 rounded-xl hover:bg-emerald-400 transition-colors uppercase tracking-widest text-sm mt-4">Go to Login</a>
+            <a href="<?php echo ($type === 'user') ? '../player/login.php' : '../owner/login.php'; ?>" class="w-full block bg-emerald-500 text-black text-center font-bold py-3 rounded-xl hover:bg-emerald-400 transition-colors uppercase tracking-widest text-sm mt-4">Go to Login</a>
         <?php else: ?>
             
             <?php if ($error): ?>
@@ -97,7 +96,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $validToken) {
         <?php endif; ?>
         
         <div class="mt-6 text-center border-t border-white/5 pt-6">
-            <a href="<?php echo ($type === 'user') ? 'login.php' : 'login.php?role=owner'; ?>" class="text-gray-500 hover:text-white text-xs font-medium uppercase tracking-widest">Back to Login</a>
+            <a href="<?php echo ($type === 'user') ? '../player/login.php' : '../owner/login.php'; ?>" class="text-gray-500 hover:text-white text-xs font-medium uppercase tracking-widest">Back to Login</a>
         </div>
     </div>
     <script>lucide.createIcons();</script>

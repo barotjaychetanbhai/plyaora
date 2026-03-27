@@ -1,6 +1,5 @@
 <?php
-require_once '../includes/db.php';
-require_once '../includes/functions.php';
+require_once '../player/includes/db.php';
 require_once '../includes/mail-service.php';
 require_once '../emails/password-reset.php';
 
@@ -100,9 +99,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="mt-12 text-center pt-8 border-t border-white/5">
             <p class="text-gray-600 text-xs uppercase tracking-widest mb-4">Go back to</p>
             <div class="flex items-center justify-center gap-8">
-                <a href="login.php" class="text-gray-400 hover:text-white text-[10px] font-black uppercase tracking-[0.2em] transition-colors">Player Login</a>
+                <a href="../player/login.php" class="text-gray-400 hover:text-white text-[10px] font-black uppercase tracking-[0.2em] transition-colors">Player Login</a>
                 <span class="w-1 h-1 bg-gray-600 rounded-full"></span>
-                <a href="login.php?role=owner" class="text-gray-400 hover:text-white text-[10px] font-black uppercase tracking-[0.2em] transition-colors">Partner Panel</a>
+                <a href="../owner/login.php" class="text-gray-400 hover:text-white text-[10px] font-black uppercase tracking-[0.2em] transition-colors">Partner Panel</a>
             </div>
         </div>
     </div>

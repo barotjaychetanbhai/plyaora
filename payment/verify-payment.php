@@ -1,7 +1,6 @@
 <?php
 header('Content-Type: application/json');
-require_once '../includes/db.php';
-require_once '../includes/functions.php';
+require_once '../player/includes/db.php';
 require_once '../includes/mail-service.php';
 require_once '../includes/qr-service.php';
 require_once '../emails/booking-confirmation.php';

@@ -1,6 +1,5 @@
 <?php
-require_once 'includes/db.php';
-require_once 'includes/functions.php';
+require_once 'player/includes/db.php';
 session_start();
 $logged_owner_id = $_SESSION['owner_id'] ?? null;
 
