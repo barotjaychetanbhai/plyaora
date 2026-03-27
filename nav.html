@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Left - Content Right Navbar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(135deg, #0f0f1e, #1a1a2e);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .navbar {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /* Logo left, everything right */
+        }
+
+        /* Left Logo */
+        .logo {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #6b00ff, #00c4ff);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 22px;
+            box-shadow: 0 0 20px rgba(107, 0, 255, 0.6);
+            flex-shrink: 0;
+        }
+
+        /* Right Side Container - All content together */
+        .right-content {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            /* Space between middle menu and icons */
+        }
+
+        /* Middle Glass Pill */
+        .middle-menu {
+            background: rgba(255, 255, 255, 0.09);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 9999px;
+            padding: 12px 48px;
+            display: flex;
+            align-items: center;
+            gap: 38px;
+            color: #ddd;
+            font-size: 15.5px;
+            font-weight: 500;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .middle-menu a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .middle-menu a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Right Icons */
+        .right-icons {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .icon-circle {
+            width: 46px;
+            height: 46px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(22px);
+            border: 1px solid rgba(255, 255, 255, 0.13);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #eee;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+        }
+
+        .icon-circle:hover {
+            background: rgba(255, 255, 255, 0.18);
+            transform: scale(1.1);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <!-- Left: Logo Only -->
+        <div class="logo">L</div>
+
+        <!-- Right: All content (Menu + Icons) -->
+        <div class="right-content">
+            <!-- Middle Glass Menu -->
+            <div class="middle-menu">
+                <a href="#">Home</a>
+                <a href="#">Dashboard</a>
+                <a href="#">Discovery</a>
+            </div>
+
+            <!-- Icons -->
+            <div class="right-icons">
+                <div class="icon-circle">📅</div>
+                <div class="icon-circle">❤️</div>
+                <div class="icon-circle">👤</div>
+            </div>
+        </div>
+    </nav>
+
+</body>
+
+</html>
