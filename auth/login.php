@@ -1,6 +1,7 @@
 <?php
 session_start();
-require_once '../player/includes/db.php';
+require_once '../includes/db.php';
+require_once '../includes/functions.php';
 
 if (isset($_SESSION['user_id']) && isset($_SESSION['role'])) {
     if ($_SESSION['role'] === 'user') header("Location: ../player/index.php");

@@ -1,6 +1,7 @@
 <?php
 header('Content-Type: application/json');
-require_once '../player/includes/db.php';
+require_once '../includes/db.php';
+require_once '../includes/functions.php';
 
 // Keys
 $keyId = 'rzp_test_SPAX3rLNKC7AsO';

@@ -1,6 +1,7 @@
 <?php
 session_start();
-require_once '../player/includes/db.php';
+require_once '../includes/db.php';
+require_once '../includes/functions.php';
 
 $role = $_GET['role'] ?? 'user';
 $error = "";

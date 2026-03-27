@@ -1,6 +1,7 @@
 <?php
 session_start();
-require_once 'player/includes/db.php';
+require_once 'includes/db.php';
+require_once 'includes/functions.php';
 
 // Get Turf ID from URL
 $turf_id = isset($_GET['id']) ? (int)$_GET['id'] : 0;

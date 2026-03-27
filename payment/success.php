@@ -1,5 +1,6 @@
 <?php
-require_once '../player/includes/db.php';
+require_once '../includes/db.php';
+require_once '../includes/functions.php';
 session_start();
 
 $booking_id = $_GET['id'] ?? '';
