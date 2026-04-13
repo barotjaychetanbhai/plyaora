@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $city = trim($_POST['city'] ?? '');
     $password = $_POST['password'] ?? '';
     $confirm = $_POST['confirm'] ?? '';
-    
+
     if (empty($name) || empty($email) || empty($phone) || empty($city) || empty($password) || empty($confirm)) {
         $error = 'Please fill all fields.';
     } elseif ($password !== $confirm) {

@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $city = trim($_POST['city'] ?? '');
     $turf_name = trim($_POST['turf_name'] ?? '');
     $password = $_POST['password'] ?? '';
-    
+
     if (empty($name) || empty($email) || empty($phone) || empty($city) || empty($password)) {
         $error = 'Please fill all required fields';
     } else {
